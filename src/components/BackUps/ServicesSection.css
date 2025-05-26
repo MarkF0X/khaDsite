@@ -153,7 +153,6 @@
 .service-description h3 {
     color: #ff7eb9;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
 }
 
 .book-button {
@@ -165,7 +164,6 @@
     margin-top: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1.3rem;
 }
 
 .book-button:hover {
@@ -184,20 +182,6 @@
 }
 
 @media (max-width: 768px) {
-
-    .carousel-arrow {
-        display: none; /* Скрываем кнопки на мобильных */
-    }
-
-    .carousel-slide {
-        touch-action: pan-y; /* Оптимизация для свайпов */
-        user-select: none; /* Запрет выделения при касании */
-    }
-
-    .carousel-slide img {
-        pointer-events: none; /* Предотвращаем случайные клики */
-    }
-
     .service-carousel {
         max-width: 100%; /* На мобильных занимает всю ширину */
     }

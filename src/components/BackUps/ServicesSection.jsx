@@ -51,34 +51,9 @@ const servicesData = [
     }
 ];
 
-const ServicesSection = ({ setActiveModal }) => {
+const ServicesSection = () => {
     const [activeService, setActiveService] = useState(servicesData[0].id);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [touchStart, setTouchStart] = useState(0);
-    const [touchEnd, setTouchEnd] = useState(0);
-
-    // Обработчик начала касания
-    const handleTouchStart = (e) => {
-        setTouchStart(e.targetTouches[0].clientX);
-    };
-
-    // Обработчик движения пальца
-    const handleTouchMove = (e) => {
-        setTouchEnd(e.targetTouches[0].clientX);
-    };
-
-    // Обработчик окончания касания
-    const handleTouchEnd = () => {
-        if (touchStart - touchEnd > 50) {
-            // Свайп влево - следующий слайд
-            nextImage();
-        }
-
-        if (touchStart - touchEnd < -50) {
-            // Свайп вправо - предыдущий слайд
-            prevImage();
-        }
-    };
 
     // Сбрасываем индекс при смене услуги
     useEffect(() => {
@@ -129,12 +104,7 @@ const ServicesSection = ({ setActiveModal }) => {
                                         &lt;
                                     </button>
 
-                                    <div
-                                        className="carousel-slide"
-                                        onTouchStart={handleTouchStart}
-                                        onTouchMove={handleTouchMove}
-                                        onTouchEnd={handleTouchEnd}
-                                    >
+                                    <div className="carousel-slide">
                                         <img
                                             src={service.images[currentImageIndex]}
                                             alt={`${service.title} - пример ${currentImageIndex + 1}`}
@@ -157,12 +127,7 @@ const ServicesSection = ({ setActiveModal }) => {
                                 <div className="service-description">
                                     <h3>{service.title}</h3>
                                     <p>{service.description}</p>
-                                    <button
-                                        className="book-button"
-                                        onClick={() => setActiveModal('appointment')}
-                                    >
-                                        Записаться онлайн
-                                    </button>
+                                    <button className="book-button">Записаться онлайн</button>
                                 </div>
                             </>
                         )}

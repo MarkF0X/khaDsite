@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Header.css';
 
-const Header = ({ activeModal, setActiveModal }) => {
+const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [activeModal, setActiveModal] = useState(null);
     const mobileMenuRef = useRef(null);
     const modalRef = useRef(null);
     const [isModalVisible, setIsModalVisible] = useState(false);
