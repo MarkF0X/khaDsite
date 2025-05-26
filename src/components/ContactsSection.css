@@ -1,0 +1,65 @@
+/* ContactsSection.css */
+.contacts {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contacts h2 {
+    text-align: center;
+    color: #ff7eb9;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Основные изменения здесь */
+.contacts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрируем кнопки */
+    gap: 1.5rem; /* Увеличиваем расстояние между кнопками */
+    margin-bottom: 3rem;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1.8rem 1.5rem; /* Увеличиваем padding */
+    background: white;
+    border-radius: 20px; /* Увеличиваем скругление */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    width: 160px; /* Фиксируем ширину */
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 126, 185, 0.3);
+}
+
+.contact-card img {
+    width: 50px; /* Увеличиваем иконки */
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover img {
+    transform: scale(1.1);
+}
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .contacts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
