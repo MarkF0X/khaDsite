@@ -45,16 +45,16 @@ const Header = ({ activeModal, setActiveModal }) => {
 
     // Соцсети
     const socialLinks = [
-        { icon: '/icons/WhatsApp_Logo.png', url: 'https://wa.me/79001234567', label: 'WhatsApp' },
-        { icon: '/icons/Telegram_Logo.png', url: 'https://t.me/beautyrelax', label: 'Telegram' },
-        { icon: '/icons/Instagram_Logo.png', url: 'https://instagram.com/beautyrelax', label: 'Instagram' }
+        { icon: '/icons/WhatsApp_Logo.png', url: 'https://vk.com/beautyrelax_nn', label: 'WhatsApp' },
+        { icon: '/icons/Telegram_Logo.png', url: 'https://vk.com/beautyrelax_nn', label: 'Telegram' },
+        { icon: '/icons/Instagram_Logo.png', url: 'https://vk.com/beautyrelax_nn', label: 'Instagram' }
     ];
 
     // Ссылки на администратора
     const adminLinks = [
-        { icon: '/icons/WhatsApp_Logo.png', url: 'https://wa.me/79001234567', label: 'WhatsApp' },
-        { icon: '/icons/Telegram_Logo.png', url: 'https://t.me/beautyrelax', label: 'Telegram' },
-        { icon: '/icons/VK_Logo.png', url: 'https://t.me/beautyrelax', label: 'Вконтакте' }
+        { icon: '/icons/WhatsApp_Logo.png', url: 'https://vk.com/im?entrypoint=community_page&media=&sel=-215780070', label: 'WhatsApp' },
+        { icon: '/icons/Telegram_Logo.png', url: 'https://vk.com/im?entrypoint=community_page&media=&sel=-215780070', label: 'Telegram' },
+        { icon: '/icons/VK_Logo.png', url: 'https://vk.com/im?entrypoint=community_page&media=&sel=-215780070', label: 'Вконтакте' }
     ];
 
     const scrollToTop = () => {
@@ -109,7 +109,7 @@ const Header = ({ activeModal, setActiveModal }) => {
 
                 <button
                     className="nav-button"
-                    onClick={() => window.open('https://t.me/beautyrelax_promo', '_blank')}
+                    onClick={() => window.open('https://t.me/beauty_relax_nailstudio', '_blank')}
                 >
                     Акции
                 </button>

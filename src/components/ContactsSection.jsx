@@ -6,7 +6,7 @@ const ContactsSection = () => {
     const contacts = [
         { icon: '/icons/VK_Logo.png', label: 'Массаж', url: 'https://vk.com/beautyrelax_nn' },
         { icon: '/icons/VK_Logo.png', label: 'Маникюр', url: 'https://vk.com/beautyrelaxnail' },
-        { icon: '/icons/Telegram_Logo.png', label: 'Канал', url: 'https://t.me/beauty_relax_nailstudio/185' },
+        { icon: '/icons/Telegram_Logo.png', label: 'Канал', url: 'https://vk.com/beautyrelax_nn' },
         { icon: '/icons/Instagram_Logo.png', label: 'Instagram', url: 'https://vk.com/beautyrelax_nn' }
     ];
 
