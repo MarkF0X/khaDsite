@@ -85,12 +85,12 @@
 .mobile-nav-button {
     display: block;
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: white;
     color: #ff7eb9;
     border: none;
     border-radius: 25px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;

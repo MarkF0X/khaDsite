@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+/* В начале файла стилей */
+html {
+  -webkit-tap-highlight-color: rgba(255, 126, 185, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Уточняем для кнопок (перезаписываем глобальное при необходимости) */
+button, [role="button"], a {
+  -webkit-tap-highlight-color: rgba(255, 126, 185, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Глобальные стили для всего сайта */
+body, * {
+  user-select: none;          /* Запрет выделения текста */
+  -webkit-user-select: none;  /* Для Safari */
+  -moz-user-select: none;     /* Для Firefox */
+  -ms-user-select: none;     /* Для IE/Edge */
+  cursor: default !important; /* Единый курсор */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Для интерактивных элементов оставляем pointer */
+button, a, [onclick], [role="button"] {
+  cursor: pointer !important;
 }
 
-.App-link {
-  color: #61dafb;
+img, a, button, .action-button {
+  -webkit-user-drag: none;  /* Запрет перетаскивания в WebKit */
+  user-drag: none;         /* Стандартный запрет */
+  pointer-events: auto;    /* Но оставляем кликабельность */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Для всех кнопок и ссылок в вашем header */
+.nav-button, .mobile-nav-button, .action-button, .close-button {
+  touch-action: manipulation; /* Оптимизация для тач-устройств */
+  outline: none !important;   /* Убираем стандартный outline */
+  box-shadow: none !important; /* Убираем тени при фокусе (если нужно) */
+}
+
+/* Альтернатива outline для доступности */
+button:focus-visible, a:focus-visible {
+  box-shadow: 0 0 0 2px #ff7eb9 !important;
+}
+
+.modal, .modal-content, .pdf-viewer-container {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Но разрешаем выделение текста внутри модалок (если нужно) */
+.modal-content-text {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+/* Все интерактивные элементы */
+button, a, [onclick] {
+  transition:
+          transform 0.2s ease,
+          background-color 0.2s ease,
+          opacity 0.2s ease;
+}
+
+/* Отключаем скачки при нажатии на мобильных устройствах */
+@media (hover: none) {
+  button:active, a:active {
+    transform: none !important;
   }
 }

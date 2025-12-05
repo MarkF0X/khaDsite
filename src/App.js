@@ -11,12 +11,13 @@ function App() {
 
     return (
         <div className="App">
-            <Header activeModal={activeModal} setActiveModal={setActiveModal} />
+            <Header activeModal={activeModal} setActiveModal={setActiveModal}/>
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
             <main>
-                <HeroSection />
-                <ServicesSection setActiveModal={setActiveModal} />
-                <MastersSection />
-                <ContactsSection />
+                <HeroSection/>
+                <ServicesSection setActiveModal={setActiveModal}/>
+                <MastersSection/>
+                <ContactsSection/>
             </main>
         </div>
     );

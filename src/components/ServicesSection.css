@@ -128,11 +128,11 @@
 }
 
 .carousel-arrow.left {
-    left: 15px;
+    left: 25px;
 }
 
 .carousel-arrow.right {
-    right: 15px;
+    right: 25px;
 }
 
 /* Анимация перехода */

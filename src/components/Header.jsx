@@ -40,7 +40,9 @@ const Header = ({ activeModal, setActiveModal }) => {
     const priceItems = [
         { name: 'Ручной массаж', file: '/pdf/hand-massage-price.pdf', icon: '/icons/massage.png' },
         { name: 'LPG массаж', file: '/pdf/lpg-price.pdf', icon: '/icons/lpg.png' },
-        { name: 'Маникюр', file: '/pdf/manic-pedic-price.pdf', icon: '/icons/nails.png' }
+        { name: 'Маникюр', file: '/pdf/manic-pedic-price.pdf', icon: '/icons/nails.png' },
+        { name: 'Брови', file: '/pdf/brows-price.pdf', icon: '/icons/brows.png' },
+        { name: 'Ресницы', file: '/pdf/eyelashes-price.pdf', icon: '/icons/eyelashes.png' }
     ];
 
     // Соцсети
